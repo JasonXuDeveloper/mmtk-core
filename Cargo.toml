@@ -82,8 +82,8 @@ name = "main"
 harness = false
 
 [features]
-default = ["builtin_env_logger"]
-
+default = ["builtin_env_logger","edge_enqueuing"]
+edge_enqueuing =[]
 # Built-in env_logger.  This feature is enabled by default.
 # The user can disable this default feature to remove `env_logger` from the dependencies.
 # See `crate::util::logger` for more details.
@@ -91,6 +91,7 @@ builtin_env_logger = ["dep:env_logger"]
 
 # Enable this feature if you want to use nightly features and compiler
 nightly = []
+
 
 # This feature is only supported on x86-64 for now
 # It's manually added to CI scripts
